@@ -19,7 +19,6 @@ use yii\helpers\VarDumper;
  */
 class ErrorBehavior extends Behavior
 {
-
     public $apiRoot;
     public $privateToken;
     public $projectName;

@@ -9,3 +9,30 @@ send error to gitlab for yii
 
 ## Usage
 
+
+### set component
+
+```
+    'errorHandler' => [
+        'errorAction' => 'site/error',
+    ],
+
+```
+### set behavior in SiteController
+
+set apiRoot, privateToken and projectName
+
+```
+    public function behaviors()
+    {
+        return [
+            'behaviors' => [
+                'class' => ErrorBehavior::className(),
+                'apiRoot' => 'http://gitlab.com/api/v3/',
+                'privateToken' => 'privateToken',
+                'projectName' => 'demo/project'
+            ]
+        ];
+    }
+    
+```
