@@ -1,6 +1,6 @@
 <?php
 
-namespace zacksleo\yii2\gitlab\behaviors\ErrorBehavior;
+namespace zacksleo\yii2\gitlab\behaviors;
 
 use yii;
 use yii\base\Behavior;
