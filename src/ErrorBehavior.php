@@ -32,7 +32,7 @@ class ErrorBehavior extends Behavior
 
     /**
      * @param $event
-     * @return bool|mixed
+     * @return boolean
      */
     public function beforeAction($event)
     {
@@ -102,6 +102,7 @@ class ErrorBehavior extends Behavior
             curl_exec($ch);
             curl_close($ch);
         }
+        return true;
     }
 
     /**
