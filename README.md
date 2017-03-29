@@ -37,6 +37,6 @@ set apiRoot, privateToken and projectName
     
 ```
 
-## Screenshoot
+## Screenshot
 
 ![](http://ww1.sinaimg.cn/large/675eb504gy1fe0mhspoo6j212706vabc.jpg)
