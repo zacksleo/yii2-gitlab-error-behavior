@@ -16,12 +16,14 @@ use yii\helpers\VarDumper;
  * @property string $apiRoot
  * @property string $privateToken
  * @property string $projectName
+ * @property string $defaultMessage
  */
 class ErrorBehavior extends Behavior
 {
     public $apiRoot;
     public $privateToken;
     public $projectName;
+    public $defaultMessage = 'Error';
 
     public function events()
     {
@@ -47,7 +49,7 @@ class ErrorBehavior extends Behavior
         if ($exception instanceof Exception) {
             $name = $exception->getName();
         } else {
-            $name = $this->defaultName ?: Yii::t('yii', 'Error');
+            $name = $this->defaultMessage ?: Yii::t('yii', 'Error');
         }
         if ($code) {
             $name .= " (#$code)";
