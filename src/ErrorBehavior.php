@@ -59,7 +59,7 @@ class ErrorBehavior extends Behavior
         } else {
             $message = $this->defaultMessage ?: Yii::t('yii', 'An internal server error occurred.');
         }
-        if (!in_array($code, ['404', '400'])) {
+        if ($code >= 500) {
             $projectId = $this->getProjectId();
             if (empty($projectId)) {
                 return true;
