@@ -26,6 +26,7 @@ class ErrorbehaviorController extends Controller
      * @expectedExceptionMessage Right Message
      */
     public function actionIndex(){
+
        try {
 
        }catch(catchNotFoundHttpException $exception){
