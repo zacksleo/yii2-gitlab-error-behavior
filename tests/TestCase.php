@@ -12,17 +12,17 @@ class TestCase extends \PHPUnit_Framework_TestCase
 {
     protected $model;
     protected $faker;
-    protected $generatestring;
+
     protected function setUp()
     {
         parent::setUp();
         $this->mockWebApplication();
         $this->faker=Factory::create('zh_CN');     //伪数据生成器
     }
+
     protected function tearDown()
     {
         $this->destroyApplication();
-        unset($this->model);
     }
 
     protected function mockWebApplication($config = [], $appClass = '\yii\web\Application')
@@ -46,6 +46,15 @@ class TestCase extends \PHPUnit_Framework_TestCase
                         ]
                     ]
                 ],
+                'errorHandler' => [
+                    'errorAction' => 'site/error',
+                ]
+            ],
+            'modules' => [
+                'behaviors' => [
+                    'class' => 'zacksleo\yii2\gitlab\behaviors\Module',
+                    'controllerNamespace' => 'zacksleo\yii2\gitlab\behaviors\tests\controllers'
+                ]
             ]
         ], $config));
     }

@@ -8,13 +8,13 @@
 namespace zacksleo\yii2\gitlab\behaviors\tests;
 
 use zacksleo\yii2\gitlab\behaviors\tests\TestCase as TestCase;
-use zacksleo\yii2\gitlab\behaviors\ErrorBehavior;
+use zacksleo\yii2\gitlab\behaviors\tests\controllers;
 use Yii;
 
 class ErrorBehaviorTest extends TestCase
 {
-    public function testBeforeAction()
-    {
-
+    public function testNotfound(){
+        $response = Yii::$app->runAction('behaviors/errorbehavior/index');
+        var_dump($response);
     }
 }
