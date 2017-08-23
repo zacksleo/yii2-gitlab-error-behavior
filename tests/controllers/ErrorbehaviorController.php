@@ -21,18 +21,9 @@ class ErrorbehaviorController extends Controller
         ];
     }
 
-    /**
-     * @expectedException        NotFoundHttpException
-     * @expectedExceptionMessage Right Message
-     */
+
     public function actionIndex(){
-
-       try {
-
-       }catch(catchNotFoundHttpException $exception){
-           return;
-       };
-        //$this->setExpectedException('');
+        return Yii::$app->response;
     }
 
 }
