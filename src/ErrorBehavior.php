@@ -44,7 +44,7 @@ class ErrorBehavior extends Behavior
         if ($exception instanceof HttpException) {
             $code = $exception->statusCode;
         } else {
-            $code = $esception->getCode();
+            $code = $exception->getCode();
         }
         if ($exception instanceof Exception) {
             $name = $exception->getName();
