@@ -1,12 +1,12 @@
 <?php
-namespace zacksleo\yii2\gitlab\behaviors\tests\controllers;
+namespace tests\controllers;
 
-use Yii;
 use yii\web\NotFoundHttpException;
+use yii\web\ServerErrorHttpException;
 use zacksleo\yii2\gitlab\behaviors\ErrorBehavior;
 use yii\web\Controller;
 
-class ErrorbehaviorController extends Controller
+class SiteController extends Controller
 {
     public function behaviors()
     {
@@ -22,8 +22,11 @@ class ErrorbehaviorController extends Controller
     }
 
 
-    public function actionIndex(){
-        return Yii::$app->response;
+    public function actionNotfound(){
+        throw new NotFoundHttpException('NOT FOUND');
     }
 
+    public function actionServererror(){
+        throw new ServerErrorHttpException('server error');
+    }
 }
