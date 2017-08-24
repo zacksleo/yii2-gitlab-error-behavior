@@ -13,10 +13,9 @@ class SiteController extends Controller
         return [
             'behaviors' => [
                 'class' => ErrorBehavior::className(),
-                //'apiRoot' => 'http://gitlab.com/api/v3/',
-                'apiRoot' => 'https://mops-gitlab.lianluo.com/',
-                'privateToken' => 'f_maz-tyyTE2UJi6sm1d',
-                'projectName' => 'test/errorbehavior'
+                'apiRoot' => 'https://gitlab.com/api/v4',
+                'privateToken' => '99jBxzicQ-cv-qNq7_zs',
+                'projectName' => 'Graychen1/project'
             ]
         ];
     }

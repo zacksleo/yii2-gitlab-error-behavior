@@ -26,6 +26,26 @@ class ErrorBehaviorTest extends TestCase
     {
         $response = Yii::$app->runAction('site/servererror');
     }
+
+    /*
+    public function testBeforeaction()
+    {
+        $behavior = new ErrorBehavior();
+        $behavior->apiRoot = 'https://gitlab.com/api/v4';
+        $behavior->privateToken='99jBxzicQ-cv-qNq7_zs';
+        $behavior->projectName='Graychen1/project';
+        $behavior->beforeAction($event);
+    }
+*/
+    public function testGetProjectId()
+    {
+        $behavior = new ErrorBehavior();
+        $behavior->apiRoot = 'https://gitlab.com/api/v4';
+        $behavior->privateToken='99jBxzicQ-cv-qNq7_zs';
+        $behavior->projectName='Graychen1/project';
+        $value = $this->invokeMethod($behavior,'getProjectId');
+        $this->assertEquals(3987856,$value);
+    }
 /*
     public function testGetProjectId(){
         $behavior = new ErrorBehavior();
