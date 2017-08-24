@@ -122,6 +122,7 @@ class ErrorBehavior extends Behavior
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_VERBOSE, false);
         $data = curl_exec($ch);
+        var_dump($data);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
         if ($httpCode >= 200 && $httpCode < 300) {
