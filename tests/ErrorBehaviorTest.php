@@ -35,7 +35,7 @@ class ErrorBehaviorTest extends TestCase
         $behavior->apiRoot = 'https://gitlab.com/api/v4';
         $behavior->privateToken='99jBxzicQ-cv-qNq7_zs';
         $behavior->projectName='Graychen1/project';
-       // $issue_num_before=$this->getIssueNum($behavior->apiRoot,$behavior->privateToken);
+        //$issue_num_before=$this->getIssueNum($behavior->apiRoot,$behavior->privateToken);
         Yii::$app->request->setUrl('https://www.baidu.com');
         Yii::$app->errorHandler->exception = new yii\web\ServerErrorHttpException('500的错误'.rand(1, 100000));
         $value=$behavior->beforeAction(new Event());
