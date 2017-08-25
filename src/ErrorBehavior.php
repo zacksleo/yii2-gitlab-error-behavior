@@ -1,7 +1,5 @@
 <?php
-
 namespace zacksleo\yii2\gitlab\behaviors;
-
 use yii;
 use yii\base\Behavior;
 use yii\base\Exception;
@@ -9,7 +7,6 @@ use yii\base\UserException;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\helpers\VarDumper;
-
 /**
  * Class ErrorBehavior
  * @package zacksleo\yii2\gitlab\behaviors\ErrorBehavior
@@ -24,14 +21,12 @@ class ErrorBehavior extends Behavior
     public $privateToken;
     public $projectName;
     public $defaultMessage = 'Error';
-
     public function events()
     {
         return [
             Controller::EVENT_BEFORE_ACTION => 'beforeAction'
         ];
     }
-
     /**
      * @param $event
      * @return boolean
@@ -106,7 +101,6 @@ class ErrorBehavior extends Behavior
         }
         return true;
     }
-
     /**
      * @return bool|integer
      */
@@ -122,7 +116,6 @@ class ErrorBehavior extends Behavior
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_VERBOSE, false);
         $data = curl_exec($ch);
-        var_dump($data);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
         if ($httpCode >= 200 && $httpCode < 300) {
