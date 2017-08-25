@@ -1,5 +1,4 @@
 <?php
-
 namespace zacksleo\yii2\gitlab\behaviors;
 
 use yii;
@@ -24,14 +23,12 @@ class ErrorBehavior extends Behavior
     public $privateToken;
     public $projectName;
     public $defaultMessage = 'Error';
-
     public function events()
     {
         return [
             Controller::EVENT_BEFORE_ACTION => 'beforeAction'
         ];
     }
-
     /**
      * @param $event
      * @return boolean
@@ -106,7 +103,6 @@ class ErrorBehavior extends Behavior
         }
         return true;
     }
-
     /**
      * @return bool|integer
      */
