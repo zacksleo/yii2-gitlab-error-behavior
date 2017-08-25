@@ -1,5 +1,6 @@
 <?php
 namespace zacksleo\yii2\gitlab\behaviors;
+
 use yii;
 use yii\base\Behavior;
 use yii\base\Exception;
@@ -7,6 +8,7 @@ use yii\base\UserException;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\helpers\VarDumper;
+
 /**
  * Class ErrorBehavior
  * @package zacksleo\yii2\gitlab\behaviors\ErrorBehavior

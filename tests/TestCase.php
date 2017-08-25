@@ -25,7 +25,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
 
     protected function mockWebApplication($config = [], $appClass = '\yii\web\Application')
     {
-       return new $appClass(ArrayHelper::merge([
+        return new $appClass(ArrayHelper::merge([
             'id' => 'testapp',
             'basePath' => __DIR__,
             'vendorPath' => $this->getVendorPath(),
@@ -134,5 +134,4 @@ class TestCase extends \PHPUnit_Framework_TestCase
         }
         return $result;
     }
-
 }
