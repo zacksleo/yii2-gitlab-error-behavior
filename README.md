@@ -8,7 +8,7 @@ send error to gitlab for yii
 [![Build Status](https://travis-ci.org/Graychen/yii2-gitlab-error-behavior.svg?branch=master)](https://travis-ci.org/Graychen/yii2-gitlab-error-behavior)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Graychen/yii2-gitlab-error-behavior/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Graychen/yii2-gitlab-error-behavior/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Graychen/yii2-gitlab-error-behavior/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Graychen/yii2-gitlab-error-behavior/?branch=master)
-[![Code Climate](https://img.shields.io/codeclimate/github/zacksleo/yii2-gitlab-error-behavior.svg)]()
+[![Code Climate](https://img.shields.io/codeclimate/github/Graychen/yii2-gitlab-error-behavior.svg)]()
 [![Build Status](https://scrutinizer-ci.com/g/Graychen/yii2-gitlab-error-behavior/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Graychen/yii2-gitlab-error-behavior/build-status/master)
 
 
