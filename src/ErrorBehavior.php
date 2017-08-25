@@ -1,7 +1,5 @@
 <?php
-
 namespace zacksleo\yii2\gitlab\behaviors;
-
 use yii;
 use yii\base\Behavior;
 use yii\base\Exception;
@@ -9,7 +7,6 @@ use yii\base\UserException;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\helpers\VarDumper;
-
 /**
  * Class ErrorBehavior
  * @package zacksleo\yii2\gitlab\behaviors\ErrorBehavior
@@ -24,14 +21,12 @@ class ErrorBehavior extends Behavior
     public $privateToken;
     public $projectName;
     public $defaultMessage = 'Error';
-
     public function events()
     {
         return [
             Controller::EVENT_BEFORE_ACTION => 'beforeAction'
         ];
     }
-
     /**
      * @param $event
      * @return boolean
@@ -44,7 +39,7 @@ class ErrorBehavior extends Behavior
         if ($exception instanceof HttpException) {
             $code = $exception->statusCode;
         } else {
-            $code = $esception->getCode();
+            $code = $exception->getCode();
         }
         if ($exception instanceof Exception) {
             $name = $exception->getName();
@@ -106,7 +101,6 @@ class ErrorBehavior extends Behavior
         }
         return true;
     }
-
     /**
      * @return bool|integer
      */
